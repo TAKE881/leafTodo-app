@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Badeen+Display&family=New+Tegomin&display=swap);
+
+/*================================
+  base Style
+  ===============================*/
+
+/*↓↓一番強いセレクター*/
+:root {
+  /* 変数の書き方
+--uniqeName: value;
+ */
+  /* 1rem == 10px */
+  font-size: 62.5%;
+  /* フォントサイズ */
+  --font-xs: 1.2rem;
+  --font-s: 1.4rem;
+  --font-m: 1.8rem;
+  --font-l: 2.4rem;
+  --font-xl: 3.8rem;
+}
+
+body {
+  font-family: "New Tegomin", serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: rgba(135, 206, 250, 0.6);
+}
+
+.container {
+  width: 105%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 0 250px 0 250px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-left: 50px;
+  animation: float 3s ease-in-out infinite;
+  overflow: hidden;
+  background: radial-gradient(circle at 50%, #9acd32, #6b8e23),
+    linear-gradient(45deg, #9acd32 25%, transparent 25%) 0 0,
+    linear-gradient(-45deg, #9acd32 25%, transparent 25%) 0 0;
+  background-size: 50px 50px;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+h1 {
+  margin-right: 50px;
+  text-align: center;
+  color: #000000;
+}
+
+form {
+  padding-left: 50px;
+  width: 20px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 130px;
+  border-radius: 10px;
+  border-color: #fff;
+  font-family: "New Tegomin", serif;
+  flex-grow: 1;
+  padding: 10px;
+  font-size: var(--font-xs);
+}
+
+button {
+  writing-mode: vertical-rl;
+  font-size: var(--font-xs);
+  margin-left: 5px;
+  padding: 4px 5px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+ul {
+  position: relative;
+  width: 220px;
+  left: 106px;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-left: 10px;
+  border-radius: 10px;
+  font-size: var(--font-s);
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #c5c5c5;
+}
+
+input[type="time"] {
+  font-size: var(--font-xs);
+  border-color: transparent;
+}
+input[type="time"]::-webkit-calendar-picker-indicator:hover {
+  cursor: pointer;
+}
